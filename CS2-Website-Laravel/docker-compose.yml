@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  laravelapp:
+    container_name: laravelAPI
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - '.:/var/www/html'
